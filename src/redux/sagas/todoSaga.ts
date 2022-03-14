@@ -27,7 +27,7 @@ function* createTodoWorker({ title }: CreateTodoAction) {
         yield put(data)
     }
   } catch (err) {
-    console.log(err)
+    throw new Error()
   }
 }
 
@@ -43,7 +43,7 @@ function* deleteTodoWorker({ id }: DeleteTodoAction) {
         yield put(data)
     }
   } catch (err) {
-    console.log(err)
+    throw new Error()
   }
 }
 
@@ -61,7 +61,7 @@ function* markCompleteWorker({ id }: MarkCompleteAction) {
         yield put(data)
     }
   } catch (err) {
-    console.log(err)
+    throw new Error()
   }
 }
 
@@ -79,7 +79,7 @@ function* markIncompleteWorker({ id }: MarkIncompleteAction) {
         yield put(data)
     }
   } catch (err) {
-    console.log(err)
+    throw new Error()
   }
 }
 
@@ -95,7 +95,7 @@ function* getTodosWorker() {
         yield put(data)
     }
   } catch (err) {
-    console.log(err)
+    throw new Error()
   }
 }
 
